@@ -74,7 +74,7 @@ prepconnect/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/prepconnect.git
+git clone https://github.com/23wh1a0552/prepconnect.git
 cd prepconnect
 ```
 
