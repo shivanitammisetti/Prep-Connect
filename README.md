@@ -100,6 +100,14 @@ Run backend:
 npm run dev
 ```
 
+If you prefer to run only the backend directly (without building frontend), use:
+
+```bash
+cd backend
+npm install
+node server.js
+```
+
 ---
 
 ### 3️⃣ Frontend Setup

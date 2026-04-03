@@ -1,35 +1,34 @@
 const express = require('express');
-const cors = require('cors');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const connectDB = require('./config/db');
 
-// Load environment variables
+// 1. Load Environment Variables
 dotenv.config();
 
-// Connect to database
+// 2. Connect to Database
 connectDB();
 
-// Initialize Express app
 const app = express();
-const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors()); // Allow frontend to access backend
-app.use(express.json()); // Parse JSON requests
+// 3. Middlewares
+app.use(cors());
+app.use(express.json());
 
-// Routes
-app.use('/api', require('./routes/api'));
+// 4. Routes (CLEANED UP - No more './routes/api')
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/doubts', require('./routes/doubtRoutes'));
+app.use('/api/videos', require('./routes/videoRoutes'));
 
-// Test route
+// 5. Root Route for testing
 app.get('/', (req, res) => {
-    res.send('✅ PrepConnect Backend is Running');
+  res.send('🚀 PrepConnect API is running smoothly!');
 });
 
-// Start server
+// 6. Start Server
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
-    console.log(`🔗 API Endpoint: http://localhost:${PORT}/api`);
-});
-app.get("/", (req, res) => {
-  res.send("Backend is running");
+    console.log(`✅ Ready for Postman testing!`);
 });
