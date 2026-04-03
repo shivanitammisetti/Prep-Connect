@@ -1,23 +1,18 @@
-# PrepConnect 
+# PrepConnect: 
+PrepConnect is a secure MERN platform connecting unplaced students with alumni for structured mentorship and interview prep.
 
-PrepConnect is a MERN stack web application designed to help unplaced students and interview aspirants prepare effectively with structured guidance, resources, and mentorship support from seniors and alumni.
+# Key Features
+OTP Auth: Secure Gmail verification.
 
----
+JWT Security: Protected user sessions.
 
-##  Problem Statement
+Role-Based: Student & Alumni tiers.
 
-Many students struggle with career direction, interview preparation, and lack of proper mentorship. PrepConnect aims to bridge this gap by providing a single platform for learning roadmaps, doubt-solving, and guidance from experienced seniors.
+Doubt Hub: Real-time problem solving.
 
----
+Cloud DB: MongoDB Atlas storage.
 
-##  Key Features
-
-* User Authentication (Login & Signup)
-* Student Dashboard
-* Ask Doubts feature
-* View Doubts posted by students
-* Guidance from seniors / alumni (conceptual)
-* Structured preparation support for interviews
+Media Cloud: Cloudinary image hosting.
 
 ---
 
@@ -26,7 +21,7 @@ Many students struggle with career direction, interview preparation, and lack of
 ### Frontend
 
 * React.js
-* React Router DOM
+* Tailwind CSS
 * Axios
 * HTML5, CSS3
 
@@ -34,47 +29,23 @@ Many students struggle with career direction, interview preparation, and lack of
 
 * Node.js
 * Express.js
-* MongoDB
 * Mongoose
 
-### Tools & Platforms
+### Services
 
-* VS Code
-* MongoDB Atlas / Local MongoDB
-* Git & GitHub
-
----
-
-## Project Structure
-
-```
-prepconnect/
-├── backend/
-│   ├── config/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   ├── package.json
-│   └── .gitignore
-│
-└── frontend/
-    ├── public/
-    ├── src/
-    │   ├── components/
-    │   ├── App.js
-    │   └── index.js
-    ├── package.json
-    └── .gitignore
-```
+* Cloudinary
+* MongoDB Atlas
+* Nodemailer
 
 ---
+
 
 ## Installation & Setup
 
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/23wh1a0552/prepconnect.git
+git clone https://github.com/shivanitammisetti/Prep-Connect.git
 cd prepconnect
 ```
 
@@ -87,12 +58,7 @@ cd backend
 npm install
 ```
 
-Create a `.env` file in `backend/`:
-
-```env
-MONGODB_URI=mongodb://localhost:27017/prepconnect
-PORT=5000
-```
+Create a `.env` file in `backend/`
 
 Run backend:
 
@@ -100,13 +66,6 @@ Run backend:
 npm run dev
 ```
 
-If you prefer to run only the backend directly (without building frontend), use:
-
-```bash
-cd backend
-npm install
-node server.js
-```
 
 ---
 
@@ -128,8 +87,8 @@ http://localhost:3000
 
 ## Future Enhancements
 
-* Role-based access (Student / Alumni)
-* Answer doubts feature
+* Role-based access (Student / Alumni) ✅
+* Answer doubts feature ✅
 * Roadmap & resource recommendations
 * Profile & progress tracking
 * UI/UX improvements
